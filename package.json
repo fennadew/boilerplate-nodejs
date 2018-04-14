@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "node app.js",
-    "build": "babel dev/js/main.js -w -o public/js/bundle.min.js --presets=env,minify",
+    "browserify": "browserify dev/js/*.js > dev/js/bundle.js",
+    "babel": "babel dev/js/bundle.js -w -o public/js/bundle.min.js --presets=env,minify",
+    "build": "npm run browserify && npm run babel",
     "nodemon": "nodemon --exec npm start -e scss,ejs,js"
   },
   "repository": {
@@ -21,6 +23,7 @@
   "homepage": "https://github.com/fennadew/boilerplate-nodejs#readme",
   "dependencies": {
     "body-parser": "^1.18.2",
+    "browserify": "^16.2.0",
     "ejs": "^2.5.8",
     "express": "^4.16.3",
     "node-sass-middleware": "^0.11.0",
