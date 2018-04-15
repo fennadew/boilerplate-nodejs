@@ -17,10 +17,10 @@
 
 * Run `npm install` to install all dependencies.
 
-* Run `npm run serve` to start the server`.
+* Run `npm run serve` to start the server.
 App listens on `http://localhost:3000/`.
 
-* For deployment, remove the reload script tag before `</body>`and reload(app). Run `npm start` to start the server`.
+* For deployment, remove the reload script tag before `</body>` in footer.ejs and reload(app) in app.js. Run `npm start` to start the server.
 
 ## Best practice
 * Use semicolons
