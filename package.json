@@ -8,6 +8,7 @@
     "browserify": "browserify dev/js/*.js > dev/js/bundle.js",
     "babel": "babel dev/js/bundle.js -w -o public/js/bundle.min.js --presets=env,minify",
     "build": "npm run browserify && npm run babel",
+    "serve": "npm run nodemon && npm run build",
     "nodemon": "nodemon --exec npm start -e scss,ejs,js"
   },
   "repository": {
