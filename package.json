@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "start": "node app.js",
-    "browserify": "browserify dev/js/*.js > dev/js/bundle.js",
-    "babel": "babel dev/js/bundle.js -w -o public/js/bundle.min.js --presets=env,minify",
-    "build": "npm run browserify && npm run babel",
-    "serve": "npm run nodemon && npm run build",
+    "browserify": "browserify src/js/*.js > src/js/bundle.js",
+    "babel": "babel src/js/bundle.js -w -o public/js/bundle.min.js --presets=env,minify",
+    "build": "npm run browserify & npm run babel",
+    "serve": "npm run nodemon & npm run build",
     "nodemon": "nodemon --exec npm start -e scss,ejs,js"
   },
   "repository": {

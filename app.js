@@ -21,7 +21,7 @@ app
 
 // Compiles SCSS to compressed CSS
 app.use(sassMiddleware({
-    src: path.join(__dirname, 'dev'),
+    src: path.join(__dirname, 'src'),
     dest: path.join(__dirname, 'public'),
     debug: true,
     outputStyle: 'compressed',
